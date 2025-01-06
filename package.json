@@ -1,0 +1,22 @@
+{
+  "name": "cse-341-project",
+  "version": "1.0.0",
+  "description": "My First Contact Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixS2000/cse-341-project1.git"
+  },
+  "author": "Felix Guzman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelixS2000/cse-341-project1/issues"
+  },
+  "homepage": "https://github.com/FelixS2000/cse-341-project1#readme",
+  "dependencies": {
+    "cse-341-project": "file:"
+  }
+}
