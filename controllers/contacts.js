@@ -67,5 +67,4 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
-  usersController,
 };
