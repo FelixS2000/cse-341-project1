@@ -1,23 +1,24 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
-const app = express();
 
+const app = express();
 const port = process.env.PORT || 3000;
 
-app.use('/', require('./routes'));
+// Middleware
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+// Routes
+app.use('/', require('./routes'));
 
+// Initialize DB and start server
 mongodb.initDb((err) => {
-  if(err){
-    console.log(err);
-  }
-  else{
-    app.listen(port, () => {console.log(`Database is listening and node Running on port ${port}`)});
+  if (err) {
+    console.error(err);
+  } else {
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
   }
 });
-
