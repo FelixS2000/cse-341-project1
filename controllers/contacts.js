@@ -1,5 +1,6 @@
 const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
+const usersController = require('../controllers/contacts');
 
 const getAll = async (req, res) => {
   const result = await mongodb.getDatabase().db().collection('contacts').find();
@@ -65,5 +66,6 @@ module.exports = {
   getSingle,
   createUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  usersController,
 };
